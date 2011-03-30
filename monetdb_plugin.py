@@ -160,7 +160,7 @@ class MonetDBPlugin(GmetadPlugin):
         except AttributeError:
             pass
         # Create the cluster RRD base path and validate it
-        clusterPath = '%s/%s'%(self.cfg[MonetDBPlugin.RRD_ROOTDIR], clusterNode.getAttr('name'))
+        clusterPath = clusterNode.getAttr('name')
         if 'GRID' == clusterNode.id:
             clusterPath = '%s/__SummaryInfo__'%clusterPath
 
